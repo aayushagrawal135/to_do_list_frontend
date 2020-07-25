@@ -12,10 +12,9 @@ class Container extends React.Component {
     }
 
     handleFormSubmit(description) {
-
         let body = JSON.stringify({task: {description: description}})
 
-        fetch('http://localhost:4000/', {
+        fetch('http://localhost:4000/tasks', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: body
